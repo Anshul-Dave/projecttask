@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Board Custom Colors */
+  --board-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --board-border: #e2e8f0;
+  --board-divider: #f1f5f9;
+
+  --indicator-todo: #f59e0b;
+  --indicator-progress: #3b82f6;
+  --indicator-review: #a855f7;
+  --indicator-done: #10b981;
+
+  --text-heading: #0f172a;
+  --text-body: #475569;
+  --text-muted: #64748b;
+  --text-placeholder: #94a3b8;
+
+  --badge-success-bg: #dcfce7;
+  --badge-success-text: #065f46;
+  --badge-danger-bg: #ffe4e6;
+  --badge-danger-text: #be123c;
+  --badge-warning-bg: #fef3c7;
+  --badge-warning-text: #b45309;
+  --badge-default-bg: #e2e8f0;
+  --badge-default-text: #64748b;
+
+  --icon-default: #cbd5e1;
+  --icon-hover: #ef4444;
+
+  /* Sidebar Project Hover Colors */
+  --sidebar-project-hover-bg: #e0f4f1;
+  --sidebar-project-hover-text: #265b51;
+
+  /* Button Colors */
+  --btn-primary: #065F46;
+  --btn-primary-hover: #064E3B;
+  --btn-text: #ffffff;
+
+  /* Primary Palette (Dark Green) */
+  --primary-50: #eff8f6;
+  --primary-100: #d6eee7;
+  --primary-200: #b0dfd2;
+  --primary-300: #81c8b7;
+  --primary-400: #57ab97;
+  --primary-500: #3b8d7c;
+  --primary-600: #2c7163;
+  --primary-700: #265b51;
+  --primary-800: #214942;
+  --primary-900: #1d3e38;
+  --primary-950: #0f4f46;
+  --primary: #0f4f46;
+  /* Base primary */
+
+  /* Secondary Palette (Teal) */
+  --secondary-50: #f2fafa;
+  --secondary-100: #e0f4f1;
+  --secondary-200: #c2e8e3;
+  --secondary-300: #93d4cb;
+  --secondary-400: #5fb08c;
+  --secondary-500: #429e84;
+  --secondary-600: #307e6b;
+  --secondary-700: #296557;
+  --secondary-800: #235147;
+  --secondary-900: #20433c;
+  --secondary-950: #0e2723;
+  --secondary: #5fb08c;
+  /* Base secondary */
+
+  /* Error Palette (Red) */
+  --error-50: #fef2f2;
+  --error-100: #fee2e2;
+  --error-200: #fecaca;
+  --error-300: #fca5a5;
+  --error-400: #f87171;
+  --error-500: #ef4444;
+  --error-600: #dc2626;
+  --error-700: #b91c1c;
+  --error-800: #991b1b;
+  --error-900: #7f1d1d;
+  --error-950: #450a0a;
+  --error: #ef4444;
+  /* Base error */
+
+  /* Neutral Palette */
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  --neutral-950: #030712;
+  --neutral: #6b7280;
+
+  /* Modal Colors */
+  --modal-bg: var(--card-bg);
+  --modal-footer-bg: var(--neutral-50);
+  --modal-title: var(--neutral-900);
+  --modal-desc: var(--neutral-500);
+  --modal-border: var(--neutral-300);
+
+  /* Spacing Scale */
+  --size-scale-50: 4px;
+  --size-scale-100: 8px;
+  --size-scale-200: 14px;
+  --size-scale-300: 24px;
+  --size-scale-400: 32px;
+  --size-scale-500: 48px;
+  --size-scale-600: 64px;
+  --size-scale-700: 100px;
+  --size-scale-800: 128px;
+  --size-scale-900: 158px;
+  --size-scale-950: 200px;
+
+  /* Font Size Scale */
+  --text-scale-50: 0.7em;
+  --text-scale-100: 0.8em;
+  --text-scale-200: 0.9em;
+  --text-scale-300: 1em;
+  --text-scale-400: 1.1em;
+  --text-scale-500: 1.2em;
+  --text-scale-600: 1.5em;
+  --text-scale-700: 1.8em;
+  --text-scale-800: 2em;
+  --text-scale-900: 2.5em;
+  --text-scale-950: 3em;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-board-bg: var(--board-bg);
+  --color-card-bg: var(--card-bg);
+  --color-board-border: var(--board-border);
+  --color-board-divider: var(--board-divider);
+
+  --color-indicator-todo: var(--indicator-todo);
+  --color-indicator-progress: var(--indicator-progress);
+  --color-indicator-review: var(--indicator-review);
+  --color-indicator-done: var(--indicator-done);
+
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-badge-success-bg: var(--badge-success-bg);
+  --color-badge-success-text: var(--badge-success-text);
+  --color-badge-danger-bg: var(--badge-danger-bg);
+  --color-badge-danger-text: var(--badge-danger-text);
+  --color-badge-warning-bg: var(--badge-warning-bg);
+  --color-badge-warning-text: var(--badge-warning-text);
+  --color-badge-default-bg: var(--badge-default-bg);
+  --color-badge-default-text: var(--badge-default-text);
+  --color-icon-default: var(--icon-default);
+  --color-icon-hover: var(--icon-hover);
+
+  --color-sidebar-project-hover-bg: var(--sidebar-project-hover-bg);
+  --color-sidebar-project-hover-text: var(--sidebar-project-hover-text);
+
+  --color-btn-primary: var(--btn-primary);
+  --color-btn-primary-hover: var(--btn-primary-hover);
+  --color-btn-text: var(--btn-text);
+
+  --spacing-scale-50: var(--size-scale-50);
+  --spacing-scale-100: var(--size-scale-100);
+  --spacing-scale-200: var(--size-scale-200);
+  --spacing-scale-300: var(--size-scale-300);
+  --spacing-scale-400: var(--size-scale-400);
+  --spacing-scale-500: var(--size-scale-500);
+  --spacing-scale-600: var(--size-scale-600);
+  --spacing-scale-700: var(--size-scale-700);
+  --spacing-scale-800: var(--size-scale-800);
+  --spacing-scale-900: var(--size-scale-900);
+  --spacing-scale-950: var(--size-scale-950);
+
+  --font-size-scale-50: var(--text-scale-50);
+  --font-size-scale-100: var(--text-scale-100);
+  --font-size-scale-200: var(--text-scale-200);
+  --font-size-scale-300: var(--text-scale-300);
+  --font-size-scale-400: var(--text-scale-400);
+  --font-size-scale-500: var(--text-scale-500);
+  --font-size-scale-600: var(--text-scale-600);
+  --font-size-scale-700: var(--text-scale-700);
+  --font-size-scale-800: var(--text-scale-800);
+  --font-size-scale-900: var(--text-scale-900);
+  --font-size-scale-950: var(--text-scale-950);
+
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  --color-primary-950: var(--primary-950);
+  --color-primary: var(--primary);
+
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+  --color-secondary-800: var(--secondary-800);
+  --color-secondary-900: var(--secondary-900);
+  --color-secondary-950: var(--secondary-950);
+  --color-secondary: var(--secondary);
+
+  --color-error-50: var(--error-50);
+  --color-error-100: var(--error-100);
+  --color-error-200: var(--error-200);
+  --color-error-300: var(--error-300);
+  --color-error-400: var(--error-400);
+  --color-error-500: var(--error-500);
+  --color-error-600: var(--error-600);
+  --color-error-700: var(--error-700);
+  --color-error-800: var(--error-800);
+  --color-error-900: var(--error-900);
+  --color-error-950: var(--error-950);
+  --color-error: var(--error);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+  --color-neutral: var(--neutral);
+
+  --color-modal-bg: var(--modal-bg);
+  --color-modal-footer-bg: var(--modal-footer-bg);
+  --color-modal-title: var(--modal-title);
+  --color-modal-desc: var(--modal-desc);
+  --color-modal-border: var(--modal-border);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    /* Modal Colors */
+    --modal-bg: var(--neutral-900);
+    /* equivalent to #111827 */
+    --modal-footer-bg: #262626;
+    --modal-title: var(--neutral-50);
+    /* equivalent to #f9fafb */
+    --modal-desc: var(--neutral-400);
+    /* equivalent to #9ca3af */
+    --modal-border: #404040;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Global Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-300);
+  border-radius: 10px;
+  border: 2px solid var(--background);
+  /* Adds a little padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-400);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-300) transparent;
+}
+
+/* Global Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-300);
+  border-radius: 10px;
+  border: 2px solid var(--background);
+  /* Adds a little padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-400);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-300) transparent;
+}
