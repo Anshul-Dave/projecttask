@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '@/src/components/sidebar/sidebar';
+import Sidebar from '@/src/components/sidebar/sidebar'; 
 import Navbar from '@/src/components/navbar';
 import { Metadata } from 'next';
 import { PROJECT_NAME } from '@/src/constants';
