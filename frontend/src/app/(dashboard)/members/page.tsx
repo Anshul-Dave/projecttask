@@ -2,7 +2,7 @@
 
 import { useState } from 'react'; 
 import { useApp } from '@/src/contexts/appcontext';
-import { useAuth } from '@/src/contexts/authcontext';
+import { useAuth } from '@/src/contexts/authcontext'; 
 import { Button } from '@/src/components/common/button';
 import ConfirmationModal from '@/src/components/modal/confirmationmodal';
 import { Users, Mail, Plus, X } from 'lucide-react';
