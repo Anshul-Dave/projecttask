@@ -1,0 +1,49 @@
+projectstask/ (Monorepo Architecture)
+├── backend/                             # 🌐 BACKEND (Node.js + Express + MySQL)
+│   ├── src/
+│   │   ├── config/                      # Database Connection Config
+│   │   │   └── db.ts
+│   │   ├── controllers/                 # Request/Response Handling Logic
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── board.controller.ts
+│   │   │   ├── init.controller.ts
+│   │   │   └── project.controller.ts
+│   │   ├── middlewares/                 # Auth verification, Error handling
+│   │   ├── models/                      # Database Schemas
+│   │   ├── routes/                      # API Endpoints Routes Definitions
+│   │   │   ├── auth.routes.ts
+│   │   │   ├── board.routes.ts
+│   │   │   ├── init.routes.ts
+│   │   │   ├── list.routes.ts
+│   │   │   ├── project.routes.ts
+│   │   │   └── task.routes.ts
+│   │   ├── services/                    # Core Business Logic & Queries
+│   │   ├── utils/                       # Helper functions
+│   │   └── server.ts                    # Main Entry Point (Express App)
+│   ├── .env                             # Backend Environment variables (PORT, DB_URL)
+│   ├── package.json                     # Backend dependencies (express, mysql2)
+│   └── tsconfig.json                    # Backend TypeScript Config
+│
+├── frontend/                            # 💻 FRONTEND (Next.js App)
+│   ├── public/                          # Static Assets (Images, Icons)
+│   ├── src/
+│   │   ├── app/                         # Next.js App Router (UI Pages only)
+│   │   │   ├── (auth)/                  # Login & Register Pages
+│   │   │   ├── (dashboard)/             # Main Dashboard UI
+│   │   │   ├── favicon.ico
+│   │   │   ├── globals.css              # Global CSS styles
+│   │   │   └── layout.tsx               # Root Layout
+│   │   ├── board/                       # Kanban Board Components
+│   │   ├── components/                  # Reusable UI Components (Modals, Navbar, Sidebar)
+│   │   ├── config/                      # Frontend Config (apiconfig.ts for API calls)
+│   │   ├── constants/                   # Static values & Error messages
+│   │   ├── contexts/                    # React Context (AuthContext, AppContext)
+│   │   ├── lib/                         # Utility functions
+│   │   └── services/                    # API Service Calls to new Backend
+│   ├── .env.local                       # NEXT_PUBLIC_API_URL=http://localhost:5000/api
+│   ├── package.json                     # Frontend dependencies (next, react)
+│   ├── tailwind.config.ts               # Tailwind CSS Config
+│   └── tsconfig.json                    # Frontend TypeScript Config
+│
+├── .gitignore                           # Git ignore rules
+└── README.md                            # Project Instructions (Root)
